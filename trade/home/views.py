@@ -7,3 +7,7 @@ def home_page(request):
 
 def about_page(request):
     return HttpResponse("This is th about page")
+
+def contace_page(request):
+    # This statement returns a render html document that has html code.
+    return render(request, "contact.html")

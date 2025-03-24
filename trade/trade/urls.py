@@ -16,10 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home.views import home_page, about_page
+"""On this statement we import the home_page, about_page and the 
+contact_page, and you can add as many as you a creating, we import
+them from the home file undre views were our functions a. 
+"""
+from home.views import home_page, about_page, contact_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    """if we leave the first quotes empty, this means this is our
+      default page, if a person doesnt have a specific location.
+    """,
     path('', home_page),
     path('about/', about_page),
+    """ On this statment means if a user inputs a path contacts, give them or her 
+    the contact page.
+    """,
+    path('contacts/', contact_page)
 ]
