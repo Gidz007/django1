@@ -22,15 +22,12 @@ them from the home file undre views were our functions a.
 """
 from home.views import home_page, about_page, contact_page
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    """if we leave the first quotes empty, this means this is our
+"""if we leave the first quotes empty, this means this is our
       default page, if a person doesnt have a specific location.
     """,
+urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', home_page),
     path('about/', about_page),
-    """ On this statment means if a user inputs a path contacts, give them or her 
-    the contact page.
-    """,
-    path('contacts/', contact_page)
+    path('contacts/', contact_page),
 ]
